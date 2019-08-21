@@ -52,6 +52,11 @@
 #define USE_SINGLE_CCODE_FILE
 #endif
 
+#if defined(EMSCRIPTEN)
+#define USE_SINGLE_CCODE_FILE
+#endif
+
+
 /* Need to fix the file seperator character when using MinGW. */
 #if defined(WINDOWS_WITH_GNUC) || defined(USING_CYGWIN)
 #define PKGDATA_FILE_SEP_STRING "/"
