@@ -49,7 +49,7 @@ endif
 ifeq ($(OS390BATCH),1)
 PKGDATA = $(TOOLBINDIR)/pkgdata $(PKGDATA_OPTS) -z -q -c -s $(CURDIR)/out/build/$(ICUDATA_PLATFORM_NAME) -d $(ICUPKGDATA_OUTDIR)
 else
-PKGDATA = @#-$(INVOKE) $(TOOLBINDIR)/pkgdata $(PKGDATA_OPTS) --without-assembly -q -c -s $(CURDIR)/out/build/$(ICUDATA_PLATFORM_NAME) -d $(ICUPKGDATA_OUTDIR)
+PKGDATA = $(TOOLBINDIR)/pkgdata $(PKGDATA_OPTS) --without-assembly -q -c -s $(CURDIR)/out/build/$(ICUDATA_PLATFORM_NAME) -d $(ICUPKGDATA_OUTDIR)
 endif
 OS390_PDS_NAME = -z -L $(BATCH_STUB_TARGET)
 
